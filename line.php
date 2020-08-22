@@ -29,6 +29,9 @@ if ( sizeof($request_array['events']) > 0 )
     if($text == "ชื่อผู้พัฒนา"){
    $reply_message = 'นางสาวกาญจนพิชชา มีสุข'."\n".$reply_message = 'รหัสนิสิต 61160276';
   }
+     if($text == "รหัสนิสิต" || $text == "ขอรหัสนิสิต" || $text == "@บอทของรหัสนิสิต" || $text == "ขอรหัสนิสิตหน่อย" ){
+      $reply_message = 'รหัสนิสิต 61160276';
+  }
     
      if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
      $url = 'https://covid19.th-stat.com/api/open/today';
