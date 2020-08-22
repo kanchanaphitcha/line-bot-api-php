@@ -23,7 +23,8 @@ if ( sizeof($request_array['events']) > 0 )
 	if($text == "ชื่ออะไร" || $text == "ชื่ออะไรคะ" || $text == "ชื่ออะไรครับ" || $text == "ชื่อ" || $text == "ชื่อไร"){
    $reply_message = 'ชื่อของฉัน คือ kanchanaphitcha';
   }
-	    if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
+	
+	   if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
      $url = 'https://covid19.th-stat.com/api/open/today';
      $ch = curl_init($url);
      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
