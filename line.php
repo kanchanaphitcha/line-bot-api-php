@@ -27,7 +27,7 @@ if ( sizeof($request_array['events']) > 0 )
   }
     
     if($text == "ชื่อผู้พัฒนา"){
-   $reply_message = 'นางสาวกาญจนพิชชา มีสุข'.'\n'.$reply_message = 'รหัสนิสิต 61160276';
+   $reply_message = 'นางสาวกาญจนพิชชา มีสุข'."\n".$reply_message = 'รหัสนิสิต 61160276';
   }
     
      if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
@@ -44,7 +44,7 @@ if ( sizeof($request_array['events']) > 0 )
      $obj = json_decode($result);
      
      $reply_message = $result;
-     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.'คน \r\n รักษาหาายแล้ว '. $obj->{'NewConfirmed'}.'คน';
+     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.'คน '.'\n'.$reply_message = 'รักษาหายแล้ว' . $obj->{'Recovered'}.'คน';
  //$reply_message +='\r\n รักษาหาายแล้ว '. $obj->{'NewConfirmed'}.'คน';
     }
   //$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
