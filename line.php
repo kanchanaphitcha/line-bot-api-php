@@ -26,7 +26,7 @@ if ( sizeof($request_array['events']) > 0 )
    $reply_message = 'ชื่อของฉัน คือ ME';
   }
     
-    if($text == "ชื่อผู้พัฒา"){
+    if($text == "ชื่อผู้พัฒนา"){
    $reply_message = 'นางสาวกาญจนพิชชา มีสุข'.'\n'.$reply_message = 'รหัสนิสิต 61160276';
   }
     
