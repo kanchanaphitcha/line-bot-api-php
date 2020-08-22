@@ -20,7 +20,7 @@ if ( sizeof($request_array['events']) > 0 )
    
    if( $event['message']['type'] == 'text' )
    {
-	if($text == "ชื่ออะไร" || $text == "ชื่ออะไรคะ" || $text == "ชื่ออะไรครับ" || $text == "ชื่อ" || $text == "ชื่อไร"){
+	if($test == "ชื่ออะไร" || $text == "ชื่ออะไรคะ" || $text == "ชื่ออะไรครับ" || $text == "ชื่อ" || $text == "ชื่อไร"){
         $reply_message = 'ชื่อของฉัน คือ kanchanaphitcha';
   }
   //$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';	
