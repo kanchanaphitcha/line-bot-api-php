@@ -21,12 +21,12 @@ if ( sizeof($request_array['events']) > 0 )
    if( $event['message']['type'] == 'text' )
    {
   $text = $event['message']['text'];
-    
   
     if($text == "ชื่ออะไร" || $text == "ชื่ออะไรคะ" || $text == "ชื่ออะไรครับ" || $text == "ชื่อ" || $text == "ชื่อไร"){
-   $reply_message = 'ชื่อของฉัน คือ toei';
+   $reply_message = 'ชื่อของฉัน คือ ME';
   }
-    if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
+    
+     if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
      $url = 'https://covid19.th-stat.com/api/open/today';
      $ch = curl_init($url);
      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -40,7 +40,7 @@ if ( sizeof($request_array['events']) > 0 )
      $obj = json_decode($result);
      
      $reply_message = $result;
-     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.'คน '."\n". $reply_message = "รักษาหายแล้ว".$obj->{'Recovered'}. 'คน',
+     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.'คน \r\n รักษาหาายแล้ว '. $obj->{'NewConfirmed'}.'คน';
  //$reply_message +='\r\n รักษาหาายแล้ว '. $obj->{'NewConfirmed'}.'คน';
     }
   //$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
